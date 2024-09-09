@@ -6,5 +6,7 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3
+    - name: definir variable
+      run: echo "USERNAME=${{ inputs.actor }}" >> $GITHUB_ENV
     - name: script-runing
       run: python hello_world.py
