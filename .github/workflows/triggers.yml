@@ -48,6 +48,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: definir variable
-        run: echo "USERNAME=${{ inputs.actor }}" >> $GITHUB_ENV
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: script-runing
         run: python hello_world.py 
