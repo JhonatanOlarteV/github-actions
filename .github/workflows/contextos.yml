@@ -1,6 +1,7 @@
 name: Contextos
 run-name: ¡Estoy aprendiendo a usar diferentes contextos!
-on: [push]
+on: 
+  workflow_dispatch
 env:
   Var1: Aprendiendo
   Var2: Github-Actions
