@@ -1,7 +1,6 @@
 name: Variables
 run-name: ¡Estoy aprendiendo a usar variables!
-on: 
-  workflow_dispatch
+on: [push]
 env:
   dia_semana: "todos los dias"
 jobs:
