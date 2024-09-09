@@ -1,5 +1,5 @@
 name: Variables
-run-name: ¡Estoy aprendiendo a usar diferentes variables!
+run-name: ¡Estoy aprendiendo a usar variables!
 on: 
   workflow_dispatch
 env:
