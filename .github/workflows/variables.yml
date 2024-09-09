@@ -1,0 +1,15 @@
+name: Variables
+run-name: ¡Estoy aprendiendo a usar variables!
+on: [push]
+env:
+  dia_semana: "todos los dias"
+jobs:
+  variables-env:
+    runs-on: ubuntu-lastest
+    env:
+      tipo_amor: " el mas tierno"
+    steps:
+      - name: correr en env
+        run: echo "yo ${{ vars.NOMBRE }} $sentimiento a ${{ vars.PAREJA }} con $tipo_amor amor $dia_semana"
+        env: 
+          sentimiento: amo

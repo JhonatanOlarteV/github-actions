@@ -1,0 +1,12 @@
+name: Python application
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    - name: definir variable
+      run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+    - name: script-runing
+      run: python hello_world.py
