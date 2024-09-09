@@ -1,0 +1,19 @@
+name: Contextos
+run-name: ¡Estoy aprendiendo a usar diferentes contextos!
+on: [push]
+env:
+  Var1: Aprendiendo
+  Var2: Github-Actions
+  Var3: Contextos
+jobs:
+  contextos-env:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: correr en env
+        run: echo "El usuario ${{ github.actor }} ${{env.Var1}} ${{env.Var2}} ${{env.Var3}}"
+  contextos-github:
+    if: ${{ github.ref == 'refs/heads/main'}} 
+    runs-on: ubuntu-lastest
+    steps:
+      - name: correr github
+        run: echo "El usuario ${{ github.actor }} esta desplegando desde la rama $GITHUB_REF"
